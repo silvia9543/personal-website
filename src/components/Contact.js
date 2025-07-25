@@ -1,29 +1,57 @@
 import React, { useState } from "react";
 import "../App.css";
-import { FaLinkedin } from "react-icons/fa";
-import "../styles/Contact.css";
+import { FaLinkedin, FaPaperPlane } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import { FaPaperPlane } from "react-icons/fa";
+import "../styles/Contact.css";
 
+const FORM_ENDPOINT = "https://formspree.io/f/xjkowgde"; 
 
 const Contact = () => {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [status, setStatus] = useState(null);
 
-  // Construct mailto link with encoded subject and body
-  const mailtoLink = `mailto:w.silvia343@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Open mail client
-    window.location.href = mailtoLink;
+    setStatus(null);
+
+    if (!subject.trim() || !message.trim()) {
+      setStatus("ERROR");
+      return;
+    }
+
+    const data = {
+      subject,
+      message,
+    };
+
+    try {
+      const response = await fetch(FORM_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setStatus("SUCCESS");
+        setSubject("");
+        setMessage("");
+      } else {
+        setStatus("ERROR");
+      }
+    } catch {
+      setStatus("ERROR");
+    }
   };
 
   return (
     <section id="contact" className="contact-section page-section">
       <h2>Let's Get in Touch!</h2>
       <a
-        href="https://www.linkedin.com/in/silviawang1/"
+        href="https://www.linkedin.com/in/silviawang1"
         target="_blank"
         rel="noopener noreferrer"
         className="linkedin-link"
@@ -31,13 +59,9 @@ const Contact = () => {
       >
         <FaLinkedin size={40} />
       </a>
-      <a
-      href="mailto:w.silvia343@gmail.com"
-      className="email-link"
-      aria-label="Send Email"
-      >
-      <MdEmail size={40} color="white" />
-      </a>    
+      <a href="mailto:w.silvia343@gmail.com" className="email-link" aria-label="Send Email">
+        <MdEmail size={40} color="white" />
+      </a>
       <form className="contact-form" onSubmit={handleSubmit}>
         <label>
           Subject:
@@ -60,10 +84,26 @@ const Contact = () => {
           />
         </label>
 
-        <button type="submit">Send Email</button>
+        <button type="submit">Send Message</button>
+
+        {status === "SUCCESS" && (
+          <p className="success-message">Thanks for your message!</p>
+        )}
+        {status === "ERROR" && (
+          <p className="error-message">
+            Oops! Something went wrong. Please try again.
+          </p>
+        )}
       </form>
+
       <div className="plane-wrapper">
-        <FaPaperPlane className="paper-plane" />
+        <div className="plane-content">
+          <p className="inspect-text">inspect me</p>
+          <div className="hidden-nugget">
+            Psst... if you made it this far, might as well leave a message right? 😎
+          </div>
+          <FaPaperPlane className="paper-plane" />
+        </div>
       </div>
     </section>
   );

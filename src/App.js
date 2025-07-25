@@ -6,8 +6,12 @@ import Experience from './components/Experience.js';
 import Projects from './components/Projects.js';
 import Skills from './components/Skills.js';
 import Contact from './components/Contact.js';
+import React, { useEffect } from "react";
 
 function App() {
+    useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []); 
   return (
     <div className="App">
       <HeaderNav/>

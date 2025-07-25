@@ -3,35 +3,47 @@ import "../styles/About.css";
 import Typewriter from "./Typewriter";
 
 const funFacts = [
-  "I moved to LA not knowing how to drive and had to live off my bike until I learned (would not recommend)",
-  "I can play piano, violin, ukulele, and am learning guitar! And I have a piano account where I post videos",
-  "I love classical piano and my favorite piece is 'Un Sospiro' by Liszt",
-  "I have way too much Studio Ghibli themed merch",
-  "The first country in Europe I've ever visited was Austria",
-  "I can swim, but don't know how to tread water...",
-  "In LA, I became obsessed with pickleball and played nearly everyday",
-  "I'm the first in my famiy to be born in the U.S, specifically NYC :)",
-  "My favorite video game is Hollow Knight and I can play Hornet's Theme on the piano",
-  "I can speak French at a proficient level and Mandarin fluently",
-  "I started an environmental magazine in high school called ECO₂",
-  "In high school, I went to the Arctic and helped scientists collect snow cores",
-  "Biking is my favorite mode of transit",
-  "I enjoy video editing and creating lifestyle content",
-  "Growing up, I had a side hustle cat-sitting in my building and rapidly gained clients",
-  "During the pandemic, I hosted a podcast documenting student life on campus",
   "I have a soundcloud with original music compositions and tracks",
+  "I moved to LA not knowing how to drive and lived off my bike until I learned (would not recommend)",
+  "I can play piano, violin, ukulele, and am learning guitar",
+  "In high school, I went to the Arctic and helped scientists collect snow cores",
+  "I can speak French at a proficient level and Mandarin fluently",
+  "The first place in Europe I've ever visited was Vienna",
+  "In my free time, I love reading novels and sketching in coffee shops",
+  "My favorite classical piano piece is 'Un Sospiro' by Liszt",
+  "In LA, I began to play pickleball nearly everyday",
+  "I'm the first in my famiy to be born in the U.S, specifically NYC :)",
+  "I started an environmental magazine in high school called ECO₂",
+  "My favorite Studio Ghibli movies tie between Spirited Away and Howl's Moving Castle",
+  "Biking is my favorite mode of transit",
+  "I enjoy creating art and digital content",
+  "Growing up, I had a side hustle cat-sitting in my building",
+  "During the pandemic, I hosted a podcast documenting student life on campus",
+  "My favorite video game is Hollow Knight and I can play Hornet's Theme on the piano",
   "In high school, I made a toy piano for my mechanical engineering class",
-  "I like to make strawberry matcha and other fun flavors"
+  "I like to make strawberry matcha and other fun flavors",
+  "I can swim, but can't tread water..."
 ];
 
 const About = () => {
   const me1 = process.env.PUBLIC_URL + "/me1.png";
-  const [fact, setFact] = useState("");
+  const [visible, setVisible] = useState(false);
 
-  const getRandomFact = () => {
-    const randomIndex = Math.floor(Math.random() * funFacts.length);
-    setFact(funFacts[randomIndex]);
+  const [factIndex, setFactIndex] = useState(null);
+  const [isFadingOut, setIsFadingOut] = useState(false);
+
+  const handleNextFact = () => {
+    if (factIndex === null) {
+      setFactIndex(0);
+    }
+    setVisible(false); // trigger fade out
+    setTimeout(() => {
+      // After fade out, show next fact and fade in
+      setFactIndex((prevIndex) => (prevIndex + 1) % funFacts.length);
+      setVisible(true); // trigger fade in
+    }, 200); // match fadeOut duration
   };
+
   return (
     <section className="header page-section" id="about">
       <div>
@@ -43,15 +55,17 @@ const About = () => {
        I am a developer based in New York City with 2+ years 
        working as a full stack software engineer. A graduate
        from Tufts University, I have a Bachelors in Computer Science 
-       and a minor in Film and Media Studies. In my free time, I can be found
-       reading novels, sketching in a cafe, or running/biking along a river somewhere. 
-      My technical passions lie in building impactful consumer-facing
-       applications and creating unique user-friendly designs. 
+       and a minor in Film and Media Studies. My technical passions lie in 
+       building impactful consumer-facing applications and creating unique 
+       user-friendly designs. 
       </p>
 
       <div className="fun-fact">
-        <button onClick={getRandomFact}>click for a fun fact!</button>
-        {fact && <p className="fact-text fade-in">💡 {fact}</p>}
+        <button onClick={handleNextFact}>click for a fun fact!</button>
+          {factIndex !== null && (
+            <p className={`fact-text ${visible ? "visible" : ""}`}>💡 {funFacts[factIndex]}</p>
+          )}        
+          <a href="#experience" className="scroll-arrow" aria-label="Scroll Down">↓</a>
       </div>
     </section>
   );
