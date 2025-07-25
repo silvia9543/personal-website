@@ -1,5 +1,72 @@
+/* 
+@font-face{
+  font-family: Centra;
+  src: url('./assets/font/Centra');
+  font-weight: 700;
+}
+
+@font-face{
+  font-family: Centra;
+  src: url('./assets/font/Centra');
+  font-weight: 700;
+}
+
+@font-face{
+  font-family: Centra;
+  src: url('./assets/font/Centra');
+  font-weight: 700;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
+body {
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #80c4b7 !important;
+  color: #fff !important;
+  font-family: 'Centra', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+} */
+
 .App {
   text-align: center;
+  background-color: #AFCBD5;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center 85%;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* optional for parallax feel */
+}
+
+.App::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.1)
+  );
+}
+
+
+.page-section {
+  padding: 6rem 6rem;
 }
 
 .App-logo {
@@ -14,7 +81,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -26,6 +92,15 @@
 
 .App-link {
   color: #61dafb;
+}
+
+nav.navbar {
+  padding: 18px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+  transition: 0.32
 }
 
 @keyframes App-logo-spin {

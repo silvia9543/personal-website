@@ -1,0 +1,104 @@
+.projects-section {
+  text-align: center;
+}
+
+.projects-title {
+  font-size: 35px;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  padding: 1rem 2rem;
+  width: 100%;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  scroll-snap-type: x mandatory;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.project-card {
+  background-color: #fefefe;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  min-height: 200px;
+  flex: 0 0 auto;
+  min-width: 300px; /* or 25% if you want exactly 4 in full width */
+  scroll-snap-align: start;
+}
+
+.slide {
+  padding: 0 1rem; /* adds space between each slide */
+  box-sizing: border-box;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.arrow {
+  font-size: 10rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  padding: 0 1rem;
+  color: #CBB28A;
+  transition: transform 0.2s;
+}
+
+.arrow:hover {
+  transform: scale(1.2);
+}
+
+.left {
+  position: absolute;
+  left: 0;
+}
+
+.right {
+  position: absolute;
+  right: 0;
+}
+
+.project-video {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.project-link:visited,
+.project-link:hover,
+.project-link:focus {
+  text-decoration: none;
+  color: inherit;
+}

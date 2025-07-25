@@ -1,0 +1,82 @@
+.header-container {
+    display: block;
+    color: #fff;
+}
+
+.header {
+  cursor: default;
+  user-select: none;
+}
+
+.header-first {
+  text-align: left;
+  margin: 0;
+  padding-top: 100px;   
+  padding-left: 200px; 
+  font-size: 48px;
+}
+
+.header-second {
+  text-align: left;
+  padding-left: 250px; 
+  font-size: 43px;
+}
+
+.profile-pic{
+  max-width: 100%;
+}
+
+.about {
+  text-align: center;
+  font-size: 35px;
+}
+
+.description {
+  font-size: 20px;
+  color: black;
+  max-width: 1000px; /* or any value like 40ch, 80%, etc. */
+  margin: 0 auto; /* centers the text container */
+  font-weight: 300;
+  line-height: 1.7rem;
+}
+
+.fun-fact {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.fun-fact button {
+  padding: 0.6rem 1.2rem;
+  background-color: #8daacc;
+  border: none;
+  border-radius: 1rem;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.fun-fact button:hover {
+  transform: scale(1.05);
+}
+
+.fact-text {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #333;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
