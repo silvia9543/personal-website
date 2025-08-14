@@ -49,6 +49,8 @@
   color: #444;
   line-height: 1.5;
   font-size: 1.2rem;
-  max-width: 700px;
-  margin-left: 250px;
+  max-width: 600px;
+  text-align: center;
+  display: inline-block;
+  position: relative
 }

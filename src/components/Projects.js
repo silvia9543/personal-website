@@ -14,9 +14,10 @@ const settings = {
 };
 
 const projects = [
-  { title: "Potencia", description: "A React Native mobile app that allows students to schedule language lessons and tutors to schedule both group and individual classes.", image: "potencia.png", video: "potencia.mp4" },
-  { title: "Colythm", description: "A rhythm based game built in Unity. Created in a group of four where I was mainly responsible for animation, music, and coding mechanics.", image: "colythm.png", url: "https://lucasdmaley.itch.io/colythm"},
-  { title: "Music By Decade", description: "A GIS Web App tracking locations mentioned in popular music in the past century using Python for web scraping, data collection, and analysis. ", image: "digHum.png", url:"https://silvia9543.github.io/DH-portfolio/final-project/" },
+  { title: "Cafe Hopper", description: "A mobile app with original pixel art and design that helps users discover cafes for working remotely, rate them, and create lists of their favorite cafes as well as connect with other users. This is a passion project work in progress as I'm currently developing the backend APIs.", video: "CafeHopperDemo.mp4" },
+  { title: "Colythm", description: "A rhythm based game built in Unity where the player must defeat each level but must strategically attack based on rhythm and color. Created in a group of four where I was mainly responsible for animation, music, and coding mechanics.", image: "colythm.png", url: "https://lucasdmaley.itch.io/colythm"},
+  { title: "Music By Decade", description: "A GIS Web App that tracks locations mentioned in popular music in the past century using Python for web scraping, data collection, and analysis. Created for an independent project in a Digital Humanities course.", image: "digHum.png", url:"https://silvia9543.github.io/DH-portfolio/final-project/" },
+  { title: "Potencia", description: "A React Native mobile app that allows students to schedule language lessons and tutors to schedule both group and individual classes. Worked on this app as a project manager, overseeing a group of developers, 1 designer, and collaborating with our clients.", image: "potencia.png", video: "potencia.mp4" },
 ];
 
 const Projects = () => {
