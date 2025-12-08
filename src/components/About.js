@@ -4,7 +4,7 @@ import Typewriter from "./Typewriter";
 
 const funFacts = [
   "I have a soundcloud with original music compositions and tracks",
-  "I moved to LA not knowing how to drive and lived off my bike until I learned (would not recommend)",
+  "I moved to LA not knowing how to drive and lived off my bike at first",
   "I can play piano, violin, ukulele, and am learning guitar",
   "In high school, I went to the Arctic and helped scientists collect snow cores",
   "I can speak French at a proficient level and Mandarin fluently",
@@ -26,7 +26,7 @@ const funFacts = [
 ];
 
 const About = () => {
-  const me1 = process.env.PUBLIC_URL + "/me1.png";
+  const me1 = process.env.PUBLIC_URL + "/lisbon.png";
   const [visible, setVisible] = useState(false);
 
   const [factIndex, setFactIndex] = useState(null);
