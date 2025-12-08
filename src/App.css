@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
   background-color: #AFCBD5;
@@ -70,4 +71,23 @@ nav.navbar {
 
 html {
   scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  .page-section {
+    padding: 4rem 1.5rem; /* mobile-friendly padding */
+  }
+  /* GLOBAL MOBILE RESET */
+* {
+  box-sizing: border-box !important;
+  }
+
+  html, body, #root {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+
 }

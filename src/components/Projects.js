@@ -7,11 +7,30 @@ import Slider from "react-slick";
 
 const settings = {
   dots: true,
-  infinite: true, // <— this enables wrap-around
+  infinite: true,
   speed: 500,
-  slidesToShow: 3,
+  slidesToShow: 3, // desktop
   slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024, // tablets
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 600, // mobile
+      settings: {
+        centerMode: false,  // turn off centerMode
+        variableWidth: false, // ensures slide width fills container     
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
 };
+
 
 const projects = [
   { title: "Cafe Hopper", description: "A mobile app with original pixel art and design that helps users discover cafes for working remotely, rate them, and create lists of their favorite cafes as well as connect with other users. This is a passion project work in progress as I'm currently developing the backend APIs.", video: "CafeHopperDemo.mp4" },
@@ -37,62 +56,60 @@ const Projects = () => {
   <section id="projects" className="projects-section page-section">
     <h2 className="projects-title">Projects</h2>
 
-    <Slider {...settings}>
-        {projects.map((project, index) => (
-        <div key={index} className="slide">
-            {project.url ? (
-            <a
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="project-link"
-            >
-                <div className="project-card">
-                {project.video ? (
-                    <video
-                    src={process.env.PUBLIC_URL + "/" + project.video}
-                    className="project-video"
-                    controls
-                    muted
-                    preload="metadata"
-                    style={{ width: "100%", borderRadius: "12px" }}
-                    />
-                ) : (
-                    <img
-                    src={process.env.PUBLIC_URL + "/" + project.image}
-                    alt={project.title}
-                    className="project-image"
-                    />
-                )}
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                </div>
-            </a>
+  <Slider {...settings}>
+    {projects.map((project, index) => (
+      project.url ? (
+        <a
+          href={project.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project-link"
+          key={index}
+        >
+          <div className="project-card">
+            {project.video ? (
+              <video
+                src={process.env.PUBLIC_URL + "/" + project.video}
+                className="project-video"
+                controls
+                muted
+                preload="metadata"
+              />
             ) : (
-            <div className="project-card">
-                {project.video ? (
-                <video
-                    src={process.env.PUBLIC_URL + "/" + project.video}
-                    className="project-video"
-                    controls
-                    muted
-                    preload="metadata"
-                    style={{ width: "100%", borderRadius: "12px" }}
-                />
-                ) : (
-                <img
-                    src={process.env.PUBLIC_URL + "/" + project.image}
-                    alt={project.title}
-                    className="project-image"
-                />
-                )}
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-            </div>
+              <img
+                src={process.env.PUBLIC_URL + "/" + project.image}
+                alt={project.title}
+                className="project-image"
+              />
             )}
+            <h3>{project.title}</h3>
+            <p>{project.description}</p>
+          </div>
+        </a>
+      ) : (
+        <div className="project-card" key={index}>
+          {project.video ? (
+            <video
+              src={process.env.PUBLIC_URL + "/" + project.video}
+              className="project-video"
+              controls
+              muted
+              preload="metadata"
+            />
+          ) : (
+            <img
+              src={process.env.PUBLIC_URL + "/" + project.image}
+              alt={project.title}
+              className="project-image"
+            />
+          )}
+          <h3>{project.title}</h3>
+          <p>{project.description}</p>
         </div>
-        ))}
-    </Slider>
+      )
+    ))}
+  </Slider>
+
 
   </section>
   );

@@ -54,3 +54,39 @@
   display: inline-block;
   position: relative
 }
+
+/* Mobile styles */
+@media (max-width: 600px) {
+    .timeline {
+      position: relative;
+      margin: 0;             /* align left, not centered */
+      padding-left: 40px;    /* space for the vertical line + markers */
+      border-left: 3px solid black; /* vertical timeline line */
+      max-width: 100%;       /* full width on mobile */
+      box-sizing: border-box;
+    }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 20px;    /* space for marker + content */
+  }
+
+  .timeline-marker {
+    position: absolute;
+    left: -11px;           /* aligns marker with line */
+    top: 0;
+    width: 14px;
+    height: 14px;
+    background-color: white;
+    border: 3px solid #CBB28A;
+    border-radius: 50%;
+  }
+
+  .timeline-content h3,
+  .timeline-content p,
+  .timeline-date {
+    text-align: left;      /* align text left for mobile */
+    max-width: 100%;
+  }
+}
