@@ -41,7 +41,7 @@ const experiences = [
     description: "Taught the week-long course 'Coding Apps and Games' with C++ to students aged 12-13. Held 2-hour daily classes consisting of lectures, live-coding, interactive exercises, and independent projects.",
   }
 ];
-const me2 = process.env.PUBLIC_URL + "/artme.png";
+const me2 = process.env.PUBLIC_URL + "/artme2.png";
 
 const Experience = () => {
   return (
