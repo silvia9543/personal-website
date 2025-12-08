@@ -27,6 +27,8 @@ const funFacts = [
 
 const About = () => {
   const me1 = process.env.PUBLIC_URL + "/lisbon.png";
+  const me2 = process.env.PUBLIC_URL + "/artme.png";
+
   const [visible, setVisible] = useState(false);
 
   const [factIndex, setFactIndex] = useState(null);

@@ -41,6 +41,7 @@ const experiences = [
     description: "Taught the week-long course 'Coding Apps and Games' with C++ to students aged 12-13. Held 2-hour daily classes consisting of lectures, live-coding, interactive exercises, and independent projects.",
   }
 ];
+const me2 = process.env.PUBLIC_URL + "/artme.png";
 
 const Experience = () => {
   return (
@@ -58,6 +59,7 @@ const Experience = () => {
           </div>
         ))}
       </div>
+    <img src={me2} style={{ width: "900px", height: "auto" }} className="art-pic" alt="illustration"/>
     </section>
   );
 };

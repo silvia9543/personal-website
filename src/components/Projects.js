@@ -18,6 +18,7 @@ const projects = [
   { title: "Colythm", description: "A rhythm based game built in Unity where the player must defeat each level but must strategically attack based on rhythm and color. Created in a group of four where I was mainly responsible for animation, music, and coding mechanics.", image: "colythm.png", url: "https://lucasdmaley.itch.io/colythm"},
   { title: "Music By Decade", description: "A GIS Web App that tracks locations mentioned in popular music in the past century using Python for web scraping, data collection, and analysis. Created for an independent project in a Digital Humanities course.", image: "digHum.png", url:"https://silvia9543.github.io/DH-portfolio/final-project/" },
   { title: "Potencia", description: "A React Native mobile app that allows students to schedule language lessons and tutors to schedule both group and individual classes. Worked on this app as a project manager, overseeing a group of developers, 1 designer, and collaborating with our clients.", image: "potencia.png", video: "potencia.mp4" },
+  { title: "Book Bunny", description: "A game made in Godot to encourage consistent creative writing practice by giving the user daily writing prompts and boosting the bunny's health after writing, with consequences for missing a day.", video: "bookbunny.mov" }
 ];
 
 const Projects = () => {
