@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/Skills.css";
 import "../App.css";
 import { FaPython, FaJava, FaReact, FaDatabase } from "react-icons/fa";
-import { SiC, SiCplusplus, SiDotnet, SiKotlin, SiSpringboot, SiUnity, SiCosmos, SiMongodb } from "react-icons/si";
+import { SiC, SiCplusplus, SiDotnet, SiKotlin, SiSpringboot, SiUnity, SiMongodb } from "react-icons/si";
 import { FaServer } from "react-icons/fa"; // For RESTful APIs, use a server icon
 
 const skills = [

@@ -31,7 +31,6 @@ const About = () => {
   const [visible, setVisible] = useState(false);
 
   const [factIndex, setFactIndex] = useState(null);
-  const [isFadingOut, setIsFadingOut] = useState(false);
 
   const handleNextFact = () => {
     if (factIndex === null) {

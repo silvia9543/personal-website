@@ -6,8 +6,7 @@ const experiences = [
     company: "The Walt Disney Company",
     role: "Software Engineer I",
     date: "July 2023 – Present",
-    description: "Work on Disney's internal platform that distributes Disney content to streaming services and airlines. I work across the stack, from building new features like uploading broadcast schedules for syndication titles\
-     to writing SQL stored procedures and data sweeps, making UI improvements, and creating Azure apps and deployments.",
+    description: "Work on Disney's internal platform that distributes Disney content to streaming services and airlines. I work across the stack, from building new features like uploading broadcast schedules for syndication titles to writing SQL stored procedures and data sweeps, making UI improvements, and creating Azure apps and deployments.",
   },
   {
     company: "IBM",
@@ -25,8 +24,7 @@ const experiences = [
     company: "Tufts JumboCode",
     role: "Project Manager",
     date: "May 2022 - July 2023",
-    description: "Led 12 student developers to build an English language learning mobile app using React Native that connects immigrant and refugee communities with volunteer tutors.\
-     Managed our partnership with the Boston nonprofit leading this effort, Potencia.",
+    description: "Led 12 student developers to build an English language learning mobile app using React Native that connects immigrant and refugee communities with volunteer tutors. Managed our partnership with the Boston nonprofit leading this effort, Potencia.",
   },
   {
     company: "Karleki",

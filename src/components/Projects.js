@@ -1,4 +1,3 @@
-import React, { useRef } from "react";
 import "../styles/Projects.css";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
@@ -43,16 +42,6 @@ const projects = [
 ];
 
 const Projects = () => {
-  const scrollRef = useRef(null);
-
-  const scroll = (direction) => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({
-        left: direction === "left" ? -400 : 400,
-        behavior: "smooth",
-      });
-    }
-  };
 
   return (
   <section id="projects" className="projects-section page-section">
