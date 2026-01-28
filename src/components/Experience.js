@@ -6,7 +6,7 @@ const experiences = [
     company: "The Walt Disney Company",
     role: "Software Engineer I",
     date: "July 2023 – Present",
-    description: "Work on Disney's internal platform that distributes Disney content to streaming services and airlines. I work across the stack, from building new features like uploading broadcast schedules for syndication titles to writing SQL stored procedures and data sweeps, making UI improvements, and creating Azure apps and deployments.",
+    description: "Work on Disney's global content portal that distributes Disney content to streaming services, airlines, and other businesses. I work across the stack, from building new features like uploading broadcast schedules for syndication titles to writing SQL stored procedures and data sweeps, making UI improvements, and creating Azure apps and deployments.",
   },
   {
     company: "IBM",

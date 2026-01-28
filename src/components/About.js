@@ -4,7 +4,6 @@ import Typewriter from "./Typewriter";
 
 const funFacts = [
   "I have a soundcloud with original music compositions and tracks",
-  "I moved to LA not knowing how to drive and lived off my bike at first",
   "I can play piano, violin, ukulele, and am learning guitar",
   "In high school, I went to the Arctic and helped scientists collect snow cores",
   "I can speak French at a proficient level and Mandarin fluently",
@@ -22,6 +21,7 @@ const funFacts = [
   "My favorite video game is Hollow Knight and I can play Hornet's Theme on the piano",
   "In high school, I made a toy piano for my mechanical engineering class",
   "I like to make strawberry matcha and other fun flavors",
+  "I moved to LA not knowing how to drive and lived off my bike at first",
   "I can swim, but can't tread water..."
 ];
 
