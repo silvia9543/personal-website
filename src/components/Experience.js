@@ -57,8 +57,6 @@ const Experience = () => {
           </div>
         ))}
       </div>
-    <img src={me2}   style={{ width: "100%", maxWidth: "900px", height: "auto", display: "block", margin: "0 auto" }}
-   className="art-pic" alt="illustration"/>
     </section>
   );
 };
