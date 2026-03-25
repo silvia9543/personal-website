@@ -52,7 +52,7 @@ const About = () => {
       <img src={me1} className="profile-pic" alt="Me"/>
       <h1 className = "about"> About Me </h1>
       <p className="description"> 
-       I am a developer based in New York City with 2+ years 
+       I am a developer based in New York City with 3+ years 
        working as a full stack software engineer. A graduate
        from Tufts University, I have a Bachelors in Computer Science 
        and a minor in Film and Media Studies. My technical passions lie in 
